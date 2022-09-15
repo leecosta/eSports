@@ -1,9 +1,9 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19001,
+  "packagerPort": 19001,
+  "expoServerNgrokUrl": "https://u7-9px.anonymous.mobile.exp.direct",
+  "packagerNgrokUrl": "https://u7-9px.anonymous.mobile.exp.direct",
+  "ngrokPid": 18388,
   "packagerPid": null,
   "webpackServerPort": null
 }
