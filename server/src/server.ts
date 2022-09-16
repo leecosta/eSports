@@ -1,4 +1,6 @@
 import express from "express";
+import cors from "cors";
+
 import { PrismaClient } from "@prisma/client";
 import { convertHourStringToMinutes } from "./utils/convert-hour-string-to-minutes";
 import { convertMinutesToHourString } from "./utils/convert-minutes-to-hour-string";
@@ -8,6 +10,9 @@ const app = express();
 
 // Entender que a informação do body é um json
 app.use(express.json());
+
+//Assim todos os fronts conseguem acessar o back
+app.use(cors());
 
 //Conexão com o banco
 const prisma = new PrismaClient();
@@ -31,7 +36,7 @@ app.post("/games/:id/ads", async (request, response) => {
   const gameId = request.params.id;
 
   // Ler o body
-  const body = request.body;
+  const body: any = request.body;
 
   const ad = await prisma.ad.create({
     data: {
