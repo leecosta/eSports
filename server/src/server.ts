@@ -13,7 +13,7 @@ app.post("/ads", (request, response) => {
 
 app.get("/games/:id/ads", (request, response) => {
   //Pegar a variável da url
-  const gameId = request.params.id;
+  // const gameId = request.params.id;
 
   return response.json([
     { id: 1, name: "Anúncio 1" },
@@ -24,7 +24,7 @@ app.get("/games/:id/ads", (request, response) => {
 });
 
 app.get("/ads/:id/discord", (request, response) => {
-  const adId = request.params.id;
+  // const adId = request.params.id;
 
   return response.json([
     { id: 1, name: "Anúncio 1" },
